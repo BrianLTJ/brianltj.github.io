@@ -25,12 +25,18 @@ $ tar -xf aria2-1.33.1.tar.gz
 ```bash
  $ sudo apt install libssl-dev libssh2-1-dev libc-ares-dev libexpat1-dev zlib1g-dev libsqlite3-dev pkg-config
 ```
-为了方便起见，使用静态编译的aria2，生成目录/home/pi/aira2
+为了方便起见，生成目录/home/pi/aira2
 
 ```bas
 $ cd /home/pi/aria2
-$ /path/to/aria2/source/code/configure ARIA2_STATIC=yes
+$ /path/to/aria2/source/code/configure
 $ make
 ```
 
-在树莓派上编译aria2耗时相当长，可以坐和放宽。
+在树莓派上编译aria2耗时相当长，可以坐和放宽。经过漫长的等待，在`/home/pi/aria2/src`中生成了编译好的aria2c。可以运行`./aria2c`，查看终端是否有类似的输出：
+
+```bash
+$ TOBE FILLED
+```
+
+这样，Aria2就算编译完成了。
