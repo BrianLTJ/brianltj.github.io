@@ -36,7 +36,41 @@ $ make
 在树莓派上编译aria2耗时相当长，可以坐和放宽。经过漫长的等待，在`/home/pi/aria2/src`中生成了编译好的aria2c。可以运行`./aria2c`，查看终端是否有类似的输出：
 
 ```bash
-$ TOBE FILLED
+Specify at least one URL.
+Usage: aria2c [OPTIONS] [URI | MAGNET | TORRENT_FILE | METALINK_FILE]...
+See 'aria2c -h'.
 ```
 
 这样，Aria2就算编译完成了。
+
+# 以后台模式运行Aria2
+
+由于Aria2本身没有提供daemon运行模式，因此需要借助screen来实现Aria2在后台运行。安装screen`$ sudo apt install screen`,
+
+```bash
+$ screen -dmS aria2 /home/pi/aria2/src/aria2c --enable-rpc --continue=true --rpc-listen-all=true --rpc-allow-origin-all=true
+```
+
+aria2的rpc设置项比较多，可以键入`/path/to/aira2/src/aria2c --help=#rpc`来查看所有相关的设置项。
+
+# 安装网页端控制台
+
+直接输入命令去控制Aria2显然是不现实的，因此要借助Aria2提供的控制端口，配合网页控制台来使用Aria2。可供Aria2使用的网页端工具有很多，这里选择[Aria2NG](https://github.com/mayswind/AriaNg)，在release下在最新版本，解压到树莓派上，例如，把文件解压到`/home/pi/aria2-ng`目录，可用命令`unzip `。
+
+接下来，就是配置一个http服务来显示这个控制台网页，这里采用`nginx`作为服务器。在终端输入
+
+`$ sudo apt install nginx`来安装nginx。然后，进入nginx的配置文件夹`/etc/nginx/conf.d`，将以下内容保存为`aria2ng.conf`：
+
+```nginx
+server {
+    listen 1600;
+    
+    location / {
+        root /home/pi/aria2-ng;
+        index index.html index.htm;
+    } 
+}
+```
+
+
+
