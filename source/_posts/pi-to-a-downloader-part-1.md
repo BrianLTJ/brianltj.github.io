@@ -48,7 +48,7 @@ See 'aria2c -h'.
 由于Aria2本身没有提供daemon运行模式，因此需要借助screen来实现Aria2在后台运行。安装screen`$ sudo apt install screen`,
 
 ```bash
-$ screen -dmS aria2 /home/pi/aria2/src/aria2c --enable-rpc --continue=true --rpc-listen-all=true --rpc-allow-origin-all=true
+$ screen -dmS aria2 /home/pi/aria2/src/aria2c --enable-rpc --continue=true --rpc-listen-all=true --rpc-allow-origin-all=true --dir=/home/pi/aria2_downloads/ --rpc-secret=YOURSECRET
 ```
 
 aria2的rpc设置项比较多，可以键入`/path/to/aira2/src/aria2c --help=#rpc`来查看所有相关的设置项。
@@ -72,5 +72,10 @@ server {
 }
 ```
 
+打开网页`http://<树莓派IP>:1600/`，在左侧Aria2Ng设置中，点击 第二个选项卡（RPCxxx），将你刚刚设置的--rpc-secret后面的YOURSECRET粘贴进 Aria2 RPC 密钥，然后按提示刷新页面，这样就能连接上Aria2后端了。
 
+
+# 结束
+
+树莓派下载器的第一阶段就完成了。有一个缺点
 
