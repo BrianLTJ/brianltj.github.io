@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://brianltj.com/"/>
-  <updated>2018-01-03T15:35:59.491Z</updated>
+  <updated>2018-02-15T06:54:47.052Z</updated>
   <id>https://brianltj.com/</id>
   
   <author>
@@ -17,11 +17,79 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>set-up-nfs-server-on-pi</title>
+    <link href="https://brianltj.com/2018/02/15/set-up-nfs-server-on-pi/"/>
+    <id>https://brianltj.com/2018/02/15/set-up-nfs-server-on-pi/</id>
+    <published>2018-02-15T02:42:03.000Z</published>
+    <updated>2018-02-15T06:54:47.052Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>把树莓派改造成挂机下载器（一）</title>
+    <link href="https://brianltj.com/2018/02/14/pi-to-a-downloader-part-1/"/>
+    <id>https://brianltj.com/2018/02/14/pi-to-a-downloader-part-1/</id>
+    <published>2018-02-14T15:49:11.000Z</published>
+    <updated>2018-02-20T07:16:45.984Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;树莓派功能全面，接口丰富，用充电宝即可供电，可将其改造成一个挂机下载器，节省电能，且能够。 —？&lt;/p&gt;
+&lt;p&gt;本篇首先实现一个能在局域网内控制的树莓派下载器，下载工具使用aria2，管理端采用WebUI。&lt;/p&gt;
+&lt;h1 id=&quot;编译生成Aria2&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="RaspberryPi" scheme="https://brianltj.com/categories/RaspberryPi/"/>
+    
+    
+      <category term="RaspberryPi" scheme="https://brianltj.com/tags/RaspberryPi/"/>
+    
+      <category term="Aria2" scheme="https://brianltj.com/tags/Aria2/"/>
+    
+      <category term="Linux" scheme="https://brianltj.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pi-starter</title>
+    <link href="https://brianltj.com/2018/02/14/pi-starter/"/>
+    <id>https://brianltj.com/2018/02/14/pi-starter/</id>
+    <published>2018-02-14T15:48:45.000Z</published>
+    <updated>2018-02-14T15:48:45.716Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="https://brianltj.com/2018/01/03/hello-world/"/>
-    <id>https://brianltj.com/2018/01/03/hello-world/</id>
-    <published>2018-01-03T15:35:59.490Z</published>
-    <updated>2018-01-03T15:35:59.491Z</updated>
+    <link href="https://brianltj.com/2018/02/13/hello-world/"/>
+    <id>https://brianltj.com/2018/02/13/hello-world/</id>
+    <published>2018-02-13T14:19:49.689Z</published>
+    <updated>2018-02-13T14:19:49.690Z</updated>
     
     <summary type="html">
     
