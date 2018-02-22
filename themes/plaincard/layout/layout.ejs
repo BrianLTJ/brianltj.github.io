@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <title>LTJ's BLOG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <%- partial('import/importVendors') %>
+    <%- partial('import/importCommon') %>
+
+    <% if(page.layout=='post') { %>
+
+      <%- partial('import/importPost') %>
+
+    <% } else if (page.layout=='index') { %>
+    
+      <%- partial('import/importIndex') %>
+
+    <% } else { %>
+      <%- partial('import/importIndex') %>
+    <% } %>
+    
+  </head>
+<body>
+<!-- Nav -->
+<%- partial('partial/nav') %>
+<!-- End Nav -->
+
+<h1><%= page.layout %></h1>
+
+<%- body %>
+
+
+<!-- Corner btn -->
+<%- partial('partial/cornerBtn', {tocCornerBtn: (["post"].indexOf(page.layout)>-1)}) %>
+<!-- End Corner Btn -->
+
+<!-- TOC -->
+<% if(["post"].indexOf(page.layout)>-1) { %>
+  <%- partial('partial/toc') %>
+<% } %>
+
+<!-- Footer -->
+<%- partial('partial/footer') %>
+<!-- End footer -->
+</body>
+</html>

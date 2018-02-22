@@ -1,0 +1,76 @@
+<%- partial('partial/headerXBig',{showHeaderContent: false,showHeaderContentPlaceholder:true}) %>
+
+<main>
+<div class="container">
+  <div class="row">
+    <!-- Post Area -->
+    <div class="col s12 post-area">
+
+    <!-- Main Area -->
+    
+    <!-- Post Item -->
+    <div class="card post" style="position:relative">
+      <div class="card-image">
+        <img src="/images/card-img-horizontal2.jpg" alt="">
+        <span class="card-title"><%- page.title %></span>
+      </div>
+      <div class="card-content">
+        <div class="post-info">
+          <div class="author">
+            <div class="author-img">
+              <img src="/images/headpic.jpg" alt="Author">
+            </div>
+            <div class="author-info">
+              <div class="author-name"><span class="grey-text text-darken-4"><%- page.author || config.author || "Awesome Guy" %></span></div>
+              <div class="author-other"><span class="grey-text text-darken-2"><%- date(page.date, "YYYY-M-D") %></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article Area -->
+        <article class="markdown-body">
+        <%- page.content %>
+        </article>
+
+        <!-- Article Area End -->
+
+          
+        <!-- Tag area -->
+        <section>
+            <span class="chip">tag1</span>
+            <span class="chip">tag2</span>
+        </section>
+        <!-- End Tag area -->
+      </div>
+      <!-- End card content -->
+      <div class="card-action" style="overflow: hidden;">
+
+        
+        <a href="#" class="right waves-effect blue-text text-darken-4">READ</a>
+        <span href="#!" class="right post-item-category grey-text text-darken-2">CATEGORY</span>
+        
+      </div>
+    </div>
+    <!-- End Post Item -->
+
+    
+
+    <!-- Page Switcher -->
+    <div class="row">
+      <!-- Last Page -->
+      <a class="waves-effect waves-teal btn-flat" href="#!"><i class="material-icons">chevron_left</i></a>
+      <!-- Next Page -->
+      <a class="waves-effect waves-teal btn-flat" href="#!"><i class="material-icons">chevron_right</i></a>
+    </div>
+    <!-- End Page Switcher -->
+    
+
+    </div>
+    <!-- End Post Feed Area -->
+
+  </div>
+</div>
+</main>
+
+
+

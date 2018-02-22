@@ -1,0 +1,36 @@
+<!-- Post Item -->
+<div class="card medium post-item">
+    <div class="card-image">
+        <img src="/images/card-img-horizontal2.jpg" alt="">
+        <span class="card-title"><%= post.title %></span>
+    </div>
+
+    <div class="card-content">
+        Post Abstracts here
+    </div>
+
+    <div class="card-action">
+        <div class="author">
+            <div class="author-img">
+                <img src="images/headpic.jpg" alt="Author">
+            </div>
+            <div class="author-info">
+                <div class="author-name">
+                    <span class="grey-text text-darken-4">
+                        <%- post.author || config.author || "Awesome Guy" %>
+                    </span>
+                </div>
+                <div class="author-other">
+                    <span class="grey-text text-darken-2">
+                        <%- date(post.date, "YYYY-M-D") %>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <a href="<%- url_for(post.path) %>" class="right waves-effect blue-text text-darken-4">READ</a>
+        <span href="#!" class="right post-item-category grey-text text-darken-2">CATEGORY</span>
+    </div>
+
+</div>
+<!-- End Post Item -->
